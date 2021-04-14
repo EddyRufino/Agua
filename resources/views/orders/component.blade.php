@@ -56,6 +56,40 @@
                     </div>
                 </div>
 
+                {{-- Records --}}
+                {{-- {{ dd(request()->routeIs('orders.edit')) }} --}}
+                @if (request()->routeIs('orders.edit'))
+
+                @else
+                    <div class="form-group row">
+                        <label for="drum_empty" class="col-md-4 col-form-label text-md-right font-weight-normal">drum_empty</label>
+
+                        <div class="col-md-6">
+                            <input id="drum_empty" type="text" class="form-control @error('drum_empty') is-invalid @enderror" name="drum_empty" value="{{ old('drum_empty', $order->drum_empty) }}"  autocomplete="drum_empty" autofocus>
+
+                            @error('drum_empty')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="drum_borrow" class="col-md-4 col-form-label text-md-right font-weight-normal">drum_borrow</label>
+
+                        <div class="col-md-6">
+                            <input id="drum_borrow" type="text" class="form-control @error('drum_borrow') is-invalid @enderror" name="drum_borrow" value="{{ old('drum_borrow', $order->drum_borrow) }}"  autocomplete="drum_borrow" autofocus>
+
+                            @error('drum_borrow')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                    </div>
+                @endif
+
                 <div class="form-group row mb-0">
                     <div class="col-md-6 offset-md-4">
                         <button type="submit" class="btn btn-primary">

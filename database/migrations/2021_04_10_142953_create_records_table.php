@@ -15,9 +15,10 @@ class CreateRecordsTable extends Migration
     {
         Schema::create('records', function (Blueprint $table) {
             $table->id();
-            $table->integer('count_drum');
-            $table->integer('drum_full');
-            $table->integer('drum_empty');
+            $table->integer('count_drum')->nullable();
+            $table->integer('drum_full')->nullable();
+            $table->integer('drum_empty')->nullable();
+            $table->integer('drum_borrow')->nullable();
             $table->timestamps();
         });
     }
@@ -32,3 +33,4 @@ class CreateRecordsTable extends Migration
         Schema::dropIfExists('records');
     }
 }
+

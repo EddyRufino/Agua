@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Record;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $drums = Record::all();
+        // $fulls = Record::latest()->get();
+        // dd($fulls);
+        return view('home', compact('drums'));
     }
 }
