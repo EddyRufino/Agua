@@ -19,6 +19,7 @@ class CreateOrdersTable extends Migration
             $table->string('pay')->nullable();
             $table->string('debt')->nullable();
             $table->foreignId('client_id')->constrained('clients')->onDelete('cascade');
+            $table->MediumText('description')->nullable();
             $table->timestamps();
         });
     }

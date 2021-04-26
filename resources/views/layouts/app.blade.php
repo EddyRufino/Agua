@@ -49,6 +49,11 @@
                                 {{ __('Orders') }}
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('reloads.create') }}">
+                                {{ __('Reloads') }}
+                            </a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

@@ -12,7 +12,7 @@ class OrderController extends Controller
 {
     public function __construct()
     {
-        //
+        $this->middleware('auth');
     }
 
     public function index()
@@ -37,6 +37,7 @@ class OrderController extends Controller
             'pay' => $request->pay,
             'debt' => bcsub($request->delivery, $request->pay),
             'client_id' => $request->client_id,
+            'description' => $request->description,
         ]);
 
         $record->decrement('drum_full', $request->delivery);

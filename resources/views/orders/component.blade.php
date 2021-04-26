@@ -20,10 +20,10 @@
                 </div>
 
                 <div class="form-group row">
-                    <label for="pay" class="col-md-4 col-form-label text-md-right font-weight-normal">Pay</label>
+                    <label for="pay" class="col-md-4 col-form-label text-md-right font-weight-normal">Drums Pay</label>
 
                     <div class="col-md-6">
-                        <input id="pay" type="text" class="form-control @error('pay') is-invalid @enderror" name="pay" value="{{ old('pay', $order->pay) }}" required autocomplete="pay" autofocus>
+                        <input id="pay" type="number" class="form-control @error('pay') is-invalid @enderror" name="pay" value="{{ old('pay', $order->pay) }}" required autocomplete="pay" autofocus>
 
                         @error('pay')
                             <span class="invalid-feedback" role="alert">
@@ -65,7 +65,7 @@
                         <label for="drum_empty" class="col-md-4 col-form-label text-md-right font-weight-normal">drum_empty</label>
 
                         <div class="col-md-6">
-                            <input id="drum_empty" type="text" class="form-control @error('drum_empty') is-invalid @enderror" name="drum_empty" value="{{ old('drum_empty', $order->drum_empty) }}"  autocomplete="drum_empty" autofocus>
+                            <input id="drum_empty" type="number" class="form-control @error('drum_empty') is-invalid @enderror" name="drum_empty" value="0"  autocomplete="drum_empty" required autofocus>
 
                             @error('drum_empty')
                                 <span class="invalid-feedback" role="alert">
@@ -79,7 +79,7 @@
                         <label for="drum_borrow" class="col-md-4 col-form-label text-md-right font-weight-normal">drum_borrow</label>
 
                         <div class="col-md-6">
-                            <input id="drum_borrow" type="text" class="form-control @error('drum_borrow') is-invalid @enderror" name="drum_borrow" value="{{ old('drum_borrow', $order->drum_borrow) }}"  autocomplete="drum_borrow" autofocus>
+                            <input id="drum_borrow" type="number" class="form-control @error('drum_borrow') is-invalid @enderror" name="drum_borrow" value="0"  autocomplete="drum_borrow" required autofocus>
 
                             @error('drum_borrow')
                                 <span class="invalid-feedback" role="alert">
@@ -89,6 +89,21 @@
                         </div>
                     </div>
                 @endif
+
+                    <div class="form-group row">
+                        <label for="drum_empty" class="col-md-4 col-form-label text-md-right font-weight-normal">Description</label>
+
+                        <div class="col-md-6">
+                           {{--  <input id="drum_empty" type="number" class="form-control @error('drum_empty') is-invalid @enderror" name="drum_empty" value="0"  autocomplete="drum_empty" required autofocus> --}}
+                           <textarea name="description" cols="5" rows="3" class="form-control @error('description') is-invalid @enderror" value="{{ old('description', $order->description) }}">{{ $order->description }}</textarea>
+
+                            @error('drum_empty')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                    </div>
 
                 <div class="form-group row mb-0">
                     <div class="col-md-6 offset-md-4">
