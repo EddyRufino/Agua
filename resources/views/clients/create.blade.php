@@ -6,7 +6,7 @@
         @csrf
 
         @include('clients.component', [
-                'btn' => 'Save',
+                'btn' => 'Guardar',
                 'client' => new App\Client
             ])
 

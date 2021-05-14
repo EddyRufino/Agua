@@ -6,7 +6,7 @@
             @csrf
 
             @include('reloads.component', [
-                    'btn' => 'Save',
+                    'btn' => 'Guardar',
                     'order' => new App\Reload
                 ])
 

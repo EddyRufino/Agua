@@ -6,7 +6,7 @@
             </div>
             <div class="card-body">
                 <div class="form-group row">
-                    <label for="count_drum" class="col-md-4 col-form-label text-md-right font-weight-normal">Count Drums</label>
+                    <label for="count_drum" class="col-md-4 col-form-label text-md-right font-weight-normal">Cant. Bidones</label>
 
                     <div class="col-md-6">
                         <input id="count_drum" type="number" class="form-control @error('count_drum') is-invalid @enderror" name="count_drum" value="{{ old('count_drum', $order->count_drum) }}" required autocomplete="count_drum" autofocus>
@@ -20,7 +20,7 @@
                 </div>
 
                 <div class="form-group row">
-                    <label for="price" class="col-md-4 col-form-label text-md-right font-weight-normal">Price Unit</label>
+                    <label for="price" class="col-md-4 col-form-label text-md-right font-weight-normal">Precio Unidad</label>
 
                     <div class="col-md-6">
                         <input id="price" type="text" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ old('price', $order->price) }}" required autocomplete="price" autofocus>

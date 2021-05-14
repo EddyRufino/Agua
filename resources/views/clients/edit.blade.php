@@ -6,7 +6,7 @@
         @csrf @method('PUT')
 
         @include('clients.component', [
-                'btn' => 'Edit'
+                'btn' => 'Guardar'
             ])
 
     </form>

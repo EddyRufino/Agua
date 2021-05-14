@@ -15,9 +15,9 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->string('delivery');
-            $table->string('pay')->nullable();
-            $table->string('debt')->nullable();
+            $table->integer('delivery');
+            $table->integer('pay')->nullable();
+            $table->integer('debt')->nullable();
             $table->foreignId('client_id')->constrained('clients')->onDelete('cascade');
             $table->MediumText('description')->nullable();
             $table->timestamps();

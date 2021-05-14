@@ -3,9 +3,9 @@
 @section('content')
     <div class="container">
         <div class="d-flex justify-content-between align-items-center">
-            <h3 class="text-muted">List Orders</h3>
+            <h3 class="text-muted">Mis Pedidos</h3>
             <h5>
-                <a href="{{ route('orders.create') }}" class="text-black-50">New</a>
+                <a href="{{ route('orders.create') }}" class="text-black-50">Nuevo</a>
             </h5>
         </div>
       <div class="row">
@@ -22,15 +22,24 @@
                   </a>
                 </h2>
                 <div class="card-subtitle">
-                    <h5>
-                        <span class="mr-4">Delivery {{ $order->delivery }}</span>
-                        <span>{{ $order->updated_at->diffForHumans() }}</span>
-                    </h5>
-                    <h6>
-                        <span class="mr-4">Pay {{ $order->pay }}</span>
-                        <span>Debt {{ $order->debt }}</span>
+                    <span class="mr-4">
+                      Pidió
+                      <h5 class="d-inline"><strong>{{ $order->delivery }}</strong></h5>
+                    </span>
+                    <span>{{ $order->updated_at->diffForHumans() }}</span>
 
-                    </h6>
+                    <div>
+                        <span class="mr-4">
+                            Pagó
+                            <h5 class="d-inline"><strong>{{ $order->pay }}</strong></h5>
+                        </span>
+                        <span>
+                            Debe
+                            <h5 class="d-inline"><strong>{{ $order->debt }}</strong></h5>
+                        </span>
+                    </div>
+
+
                 </div>
                 <hr>
               <div class="card-text">

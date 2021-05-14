@@ -6,7 +6,7 @@
             </div>
             <div class="card-body">
                 <div class="form-group row">
-                    <label for="delivery" class="col-md-4 col-form-label text-md-right font-weight-normal">Delivery</label>
+                    <label for="delivery" class="col-md-4 col-form-label text-md-right font-weight-normal">Entrega</label>
 
                     <div class="col-md-6">
                         <input id="delivery" type="text" class="form-control @error('delivery') is-invalid @enderror" name="delivery" value="{{ old('delivery', $order->delivery) }}" required autocomplete="delivery" autofocus>
@@ -20,7 +20,7 @@
                 </div>
 
                 <div class="form-group row">
-                    <label for="pay" class="col-md-4 col-form-label text-md-right font-weight-normal">Drums Pay</label>
+                    <label for="pay" class="col-md-4 col-form-label text-md-right font-weight-normal">Bidones Pago</label>
 
                     <div class="col-md-6">
                         <input id="pay" type="number" class="form-control @error('pay') is-invalid @enderror" name="pay" value="{{ old('pay', $order->pay) }}" required autocomplete="pay" autofocus>
@@ -36,7 +36,7 @@
                 <input type="text" name="debt" value="{{ old('debt', $order->debt) }}" hidden>
 
                 <div class="form-group row">
-                    <label for="client_id" class="col-md-4 col-form-label text-md-right font-weight-normal">Client</label>
+                    <label for="client_id" class="col-md-4 col-form-label text-md-right font-weight-normal">Cliente</label>
 
                     <div class="col-md-6">
                         <select class="form-control select2" name="client_id">
@@ -62,7 +62,7 @@
 
                 @else
                     <div class="form-group row">
-                        <label for="drum_empty" class="col-md-4 col-form-label text-md-right font-weight-normal">drum_empty</label>
+                        <label for="drum_empty" class="col-md-4 col-form-label text-md-right font-weight-normal">Bidones Vacíos</label>
 
                         <div class="col-md-6">
                             <input id="drum_empty" type="number" class="form-control @error('drum_empty') is-invalid @enderror" name="drum_empty" value="0"  autocomplete="drum_empty" required autofocus>
@@ -76,7 +76,7 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="drum_borrow" class="col-md-4 col-form-label text-md-right font-weight-normal">drum_borrow</label>
+                        <label for="drum_borrow" class="col-md-4 col-form-label text-md-right font-weight-normal">Bidones Prestados</label>
 
                         <div class="col-md-6">
                             <input id="drum_borrow" type="number" class="form-control @error('drum_borrow') is-invalid @enderror" name="drum_borrow" value="0"  autocomplete="drum_borrow" required autofocus>
@@ -91,7 +91,7 @@
                 @endif
 
                     <div class="form-group row">
-                        <label for="drum_empty" class="col-md-4 col-form-label text-md-right font-weight-normal">Description</label>
+                        <label for="drum_empty" class="col-md-4 col-form-label text-md-right font-weight-normal">Descripción</label>
 
                         <div class="col-md-6">
                            {{--  <input id="drum_empty" type="number" class="form-control @error('drum_empty') is-invalid @enderror" name="drum_empty" value="0"  autocomplete="drum_empty" required autofocus> --}}

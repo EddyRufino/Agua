@@ -9,7 +9,7 @@ Route::get('/', function () {
 Route::resource('clients', 'ClientController')->except(['show']);
 Route::resource('orders', 'OrderController')->except(['show']);
 Route::resource('records', 'RecordController')->except(['show']);
-Route::resource('reloads', 'ReloadController')->except(['show']);
+Route::resource('reloads', 'ReloadController')->only(['create', 'store']);
 
 Auth::routes(['register' => false]);
 

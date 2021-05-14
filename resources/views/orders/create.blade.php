@@ -6,7 +6,7 @@
             @csrf
 
             @include('orders.component', [
-                    'btn' => 'Save',
+                    'btn' => 'Guardar',
                     'order' => new App\Order
                 ])
 

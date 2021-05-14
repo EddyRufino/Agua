@@ -36,22 +36,22 @@
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('home') }}">
-                                {{ __('Home') }}
+                                Panel
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('clients.index') }}">
-                                {{ __('Clients') }}
+                                Clientes
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('orders.index') }}">
-                                {{ __('Orders') }}
+                                Pedidos
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('reloads.create') }}">
-                                {{ __('Reloads') }}
+                                Recarga
                             </a>
                         </li>
                     </ul>

@@ -6,7 +6,7 @@
             </div>
             <div class="card-body">
                 <div class="form-group row">
-                    <label for="name" class="col-md-4 col-form-label text-md-right font-weight-normal">Client</label>
+                    <label for="name" class="col-md-4 col-form-label text-md-right font-weight-normal">Cliente</label>
 
                     <div class="col-md-6">
                         <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name', $client->name) }}" required autocomplete="name" autofocus>
@@ -20,7 +20,7 @@
                 </div>
 
                 <div class="form-group row">
-                    <label for="phone" class="col-md-4 col-form-label text-md-right font-weight-normal">Phone</label>
+                    <label for="phone" class="col-md-4 col-form-label text-md-right font-weight-normal">Celular</label>
 
                     <div class="col-md-6">
                         <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone', $client->phone) }}" required autocomplete="phone" autofocus>
@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="form-group row">
-                    <label for="address" class="col-md-4 col-form-label text-md-right font-weight-normal">Address</label>
+                    <label for="address" class="col-md-4 col-form-label text-md-right font-weight-normal">Dirección</label>
 
                     <div class="col-md-6">
                         <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address', $client->address) }}" required autocomplete="address" autofocus>
