@@ -54,6 +54,11 @@
                                 Recarga
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('report.index') }}">
+                                Reporte
+                            </a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
