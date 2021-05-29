@@ -15,6 +15,9 @@ Route::resource('reloads', 'ReloadController')->only(['create', 'store']);
 Route::get('generar-reports', 'Report\ReportAguaController@index')->name('report.index');
 Route::get('report-agua', 'Report\ReportAguaController@agua')->name('report.agua');
 
+// Charts
+Route::get('dashboard-sisa', 'Dashboard\dashboardChartController@index')->name('dashboard');
+
 Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
