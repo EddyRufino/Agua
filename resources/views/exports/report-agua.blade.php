@@ -24,7 +24,7 @@
                     <td>{{ $order->delivery }}</td>
                     <td>{{ $order->pay }}</td>
                     <td>{{ $order->debt }}</td>
-                    <td>{{ $order->created_at }}</td>
+                    <td>{{ $order->created_at->format('d-M-Y') }}</td>
                 </tr>
             @endforeach
                 <tr>

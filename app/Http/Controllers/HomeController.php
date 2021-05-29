@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Order;
 use App\Record;
+use App\Reload;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -31,6 +33,12 @@ class HomeController extends Controller
         $pay = $pay->sum();
         $debt = $debt->sum();
 
-        return view('home', compact('drums', 'pay', 'debt'));
+        // Mis Recargas
+        $reloads = Reload::latest()
+                ->whereYear('created_at', Carbon::now()->format('Y'))
+                ->whereMonth('created_at', Carbon::now()->format('m'))
+                ->get();
+
+        return view('home', compact('drums', 'pay', 'debt', 'reloads'));
     }
 }

@@ -33,33 +33,50 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('home') }}">
-                                Panel
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('clients.index') }}">
-                                Clientes
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('orders.index') }}">
-                                Pedidos
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('reloads.create') }}">
-                                Recarga
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('report.index') }}">
-                                Reporte
-                            </a>
-                        </li>
-                    </ul>
+                    @auth()
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a href="{{ route('home') }}"
+                                    class="nav-link {{ request()->routeIs('home') ?
+                                        'bg-info text-white rounded' : '' }}"
+                                >
+                                    Panel
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('clients.index') }}"
+                                    class="nav-link {{ request()->routeIs('clients.index') ?
+                                        'bg-info text-white rounded' : '' }}"
+                                >
+                                    Clientes
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('orders.index') }}"
+                                    class="nav-link {{ request()->routeIs('orders.index') ?
+                                        'bg-info text-white rounded' : '' }}"
+                                >
+                                    Pedidos
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('reloads.create') }}"
+                                    class="nav-link {{ request()->routeIs('reloads.create') ?
+                                        'bg-info text-white rounded' : '' }}"
+                                >
+                                    Recarga
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('report.index') }}"
+                                    class="nav-link {{ request()->routeIs('report.index') ?
+                                        'bg-info text-white rounded' : '' }}"
+                                >
+                                    Reporte
+                                </a>
+                            </li>
+                        </ul>
+                    @endauth
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
