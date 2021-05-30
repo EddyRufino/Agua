@@ -23,7 +23,7 @@
                     <label for="pay" class="col-md-4 col-form-label text-md-right font-weight-normal">Bidones Pago</label>
 
                     <div class="col-md-6">
-                        <input id="pay" type="number" class="form-control @error('pay') is-invalid @enderror" name="pay" value="{{ old('pay', $order->pay) }}" required autocomplete="pay" autofocus>
+                        <input id="pay" type="number" class="form-control @error('pay') is-invalid @enderror" name="pay" value="{{ old('pay', $order->pay ? $order->pay : 0) }}" required autocomplete="pay" autofocus>
 
                         @error('pay')
                             <span class="invalid-feedback" role="alert">

@@ -10,12 +10,12 @@ class ClientController extends Controller
 {
     public function __construct()
     {
-        //
+        $this->middleware('auth');
     }
 
     public function index()
     {
-        $clients = Client::latest()->paginate(10);
+        $clients = Client::latest()->paginate(9);
         return view('clients.index', compact('clients'));
     }
 
